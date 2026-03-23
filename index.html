@@ -396,5 +396,236 @@ function calcularTotales() {
 calcularTotales();
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card" style="margin-top:40px;">
+  <h2 style="text-align:center; color:var(--accent); font-family:'Playfair Display', serif;">Resumen Alternativo</h2>
+  <table id="tabla2">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Ganancia</th>
+        <th>Nombre</th>
+        <th>Ganancia</th>
+        <th>Fecha</th>
+        <th>Minutos</th>
+        <th>Método</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$30.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>02/20/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$30.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>02/21/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+<tr>
+        <td>Yelisner Mendoza</td>
+        <td>$5.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>02/26/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$5.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/02/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+<tr>
+        <td>Yelisner Mendoza</td>
+        <td>$3.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>02/26/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$20.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/03/2026</td>
+        <td>10</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$7.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/03/2026</td>
+        <td>10</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+          <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$5.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/06/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+      
+          <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$5.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/10/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+          <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$20.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/10/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+       <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$10.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$0.00</td>
+        <td>03/22/2026</td>
+        <td>5</td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+
+
+  <button id="total-yelisner2"></button>
+  <button id="total-eglenia2"></button>
+</div>
+
+<script>
+function calcularTotales2() {
+  let totalYelisner2 = 0;
+  let totalEglenia2 = 0;
+
+  document.querySelectorAll("#tabla2 tbody tr").forEach(fila => {
+    if (fila.children[0].textContent === "Yelisner Mendoza") {
+      totalYelisner2 += parseFloat(fila.children[1].textContent.replace("$",""));
+    }
+    if (fila.children[2].textContent === "Eglenia Gutt") {
+      totalEglenia2 += parseFloat(fila.children[3].textContent.replace("$",""));
+    }
+  });
+
+  document.getElementById("total-yelisner2").textContent =
+    `Total de Yelisner Mendoza: $${totalYelisner2.toFixed(2)}`;
+
+  document.getElementById("total-eglenia2").textContent =
+    `Total de Eglenia Gutt: $${totalEglenia2.toFixed(2)}`;
+}
+
+calcularTotales2();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
