@@ -991,8 +991,110 @@ calcularTotales3();
 
 
 
+<!-------------------------------------------------------------------------------------------------------------->
 
 
+
+
+<div class="card" style="margin-top:40px;">
+  <h2 style="text-align:center; color:var(--accent); font-family:'Playfair Display', serif;">
+    Resumen Alternativo 3
+  </h2>
+
+  <table id="tabla4">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Ganancia</th>
+        <th>Nombre</th>
+        <th>Ganancia</th>
+        <th>Fecha</th>
+        <th>Minutos</th>
+        <th>Método</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$10.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$3.00</td>
+        <td>09/08/2026</td>
+        <td>3 minutos </td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+            <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$20.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$3.00</td>
+        <td>09/08/2026</td>
+        <td>5 minutos </td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+            <tr>
+        <td>Yelisner Mendoza</td>
+        <td>$10.00</td>
+        <td>Eglenia Gutt</td>
+        <td>$3.00</td>
+        <td>09/10/2026</td>
+        <td>3 minutos </td>
+        <td>PayPal</td>
+        <td>Listo</td>
+      </tr>
+
+
+
+      <!-- AGREGAR MÁS FILAS AQUÍ -->
+
+    </tbody>
+  </table>
+
+  <button id="total-yelisner4"></button>
+  <button id="total-eglenia4"></button>
+</div>
+
+<script>
+function calcularTotales4() {
+  let totalYelisner4 = 0;
+  let totalEglenia4 = 0;
+
+  document.querySelectorAll("#tabla4 tbody tr").forEach(fila => {
+
+    if (fila.children[0].textContent.trim() === "Yelisner Mendoza") {
+      totalYelisner4 += parseFloat(
+        fila.children[1].textContent.replace("$", "").trim()
+      );
+    }
+
+    if (fila.children[2].textContent.trim() === "Eglenia Gutt") {
+      totalEglenia4 += parseFloat(
+        fila.children[3].textContent.replace("$", "").trim()
+      );
+    }
+
+  });
+
+  document.getElementById("total-yelisner4").textContent =
+    `Total de Yelisner Mendoza: $${totalYelisner4.toFixed(2)}`;
+
+  document.getElementById("total-eglenia4").textContent =
+    `Total de Eglenia Gutt: $${totalEglenia4.toFixed(2)}`;
+}
+
+calcularTotales4();
+</script>
+```
 
 
 
